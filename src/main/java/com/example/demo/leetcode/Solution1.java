@@ -15,7 +15,6 @@ public class Solution1 {
         if (length==0) {
             return new int[0];
         }
-
         HashMap<Integer,Integer> map=new HashMap<>();
         int[] res=new int[2];
         for (int i=0;i<nums.length;i++) {
