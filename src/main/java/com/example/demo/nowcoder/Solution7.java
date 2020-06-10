@@ -9,7 +9,8 @@ package com.example.demo.nowcoder;
  */
 public class Solution7 {
     public static void main(String[] args) {
-
+        int i = new Solution7().fiboNacci(6);
+        System.out.println(i);
     }
     public int fiboNacci(int n) {
           if (n<2) {
