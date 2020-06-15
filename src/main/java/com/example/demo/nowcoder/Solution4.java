@@ -17,7 +17,7 @@ public class Solution4 {
     }
     public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
         TreeNode res=help(pre,0,pre.length-1,in,0,in.length-1);
-         return res;
+        return res;
     }
 
     private TreeNode help(int[] pre,int startPre,int endPre,int[] in,int startIn,int endIn) {

@@ -8,6 +8,7 @@ package com.example.demo.nowcoder;
  * 求base的exponent次方。
    保证base和exponent不同时为0
    2 3 8     2 -3  1/8
+   考虑到exponent为负数的情况
  */
 public class Solution12 {
     public static void main(String[] args) {
