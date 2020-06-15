@@ -25,7 +25,6 @@ public class Solution14 {
                 break;
             }
          }
-
         return res;
     }
 
