@@ -1,7 +1,6 @@
 package com.example.demo.nowcoder;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author qp
@@ -17,10 +16,47 @@ public class Solution19 {
     }
 
     public ArrayList<Integer> printMatrix(int [][] matrix) {
-       ArrayList<Integer> res=new ArrayList<>();
+        ArrayList<Integer> res=new ArrayList<>();
+        if( matrix.length==0 || matrix[0].length==0) {
+            return res;
+        }
+        int left=0;
+        int right=matrix[0].length-1;
+        int up=0;
+        int end=matrix.length-1;
+        while (true) {
+            for (int col=left; col<=right; col++) {
+                res.add(matrix[up][col]);
+            }
+            up++;
+            if (up>end) {
+                break;
+            }
+            for (int row=up; row<=end; row++ ) {
+                res.add(matrix[row][right]);
+            }
+            right--;
+            if (left>right) {
+                break;
+            }
 
+            for (int col=right; col>=left; col--) {
+                res.add(matrix[end][col]);
+            }
+            end--;
+            if (up>end) {
+                break;
+            }
+            for (int row=end; row>=up; row--) {
+                res.add(matrix[row][left]);
+            }
 
+            left++;
+            if (left>right) {
+                break;
+            }
+        }
 
-       return res;
+        return res;
     }
 }
