@@ -17,21 +17,18 @@ public class Solution20 {
     Stack<Integer> minStack=new Stack<>();
     public void push(int node) {
        stack.push(node);
-       if (!minStack.empty()) {
-           int tem=minStack.peek();
-           if (tem>node) {
-               minStack.push(node);
-           }
-       }else {
+       if (minStack.empty() || minStack.peek()>node) {
            minStack.push(node);
        }
-
     }
 
     public void pop() {
-    if (stack.pop()==minStack.peek()) {
-        minStack.pop();
-    }
+      int tem=stack.pop();
+      if (!minStack.empty()) {
+          if(tem==minStack.peek()) {
+              minStack.pop();
+          }
+      }
      }
 
     public int top() {
